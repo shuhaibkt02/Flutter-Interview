@@ -28,6 +28,7 @@ Future<List<Job>> fetchJobs() async {
   final uri = Uri.https(host, path, queryParameters);
   final result = await HttpClient()
       .getUrl(uri)
+      // .then((req) => req.headers.add('Accept', 'application/json'))
       .then((req) => req.close())
       .then((res) => res.transform(utf8.decoder).join());
   // final results = await http.get(uri, headers: headers);
