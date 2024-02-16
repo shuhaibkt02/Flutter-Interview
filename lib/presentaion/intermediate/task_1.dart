@@ -27,13 +27,20 @@ class _OrderPageState extends State<OrderPage> {
       ),
       if (isShowing)
         Container(
+          key: const ValueKey('blue'), // Added unique key
           color: Colors.blue,
           height: 40,
         ),
       Container(
+        key: const ValueKey('red'), // Added unique key
         color: Colors.red,
         height: 40,
       ),
     ]);
   }
 }
+
+/// shortly say issue is lack usage of Key
+/// add key to solve the issue
+
+/// This question is not properly maintained, so when you first encounter it, you may wonder what is the issue.
